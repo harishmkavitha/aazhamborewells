@@ -1,0 +1,424 @@
+{
+ "services": {
+  "borewell-drilling-services": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-drilling-services.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell drilling services in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-drilling-services-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell drilling services in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-rig-drilling-services": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-rig-drilling-services.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell rig drilling in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-rig-drilling-services-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell rig drilling in Chennai by Aazham Borewells"
+   }
+  },
+  "galaxy-drilling-services": {
+   "lead": {
+    "src": "assets/img/photos/svc-galaxy-drilling-services.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Galaxy rig drilling in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-galaxy-drilling-services-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Galaxy rig drilling in Chennai by Aazham Borewells"
+   }
+  },
+  "dth-method-drilling-services": {
+   "lead": {
+    "src": "assets/img/photos/svc-dth-method-drilling-services.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "DTH method drilling in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-dth-method-drilling-services-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "DTH method drilling in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-compressor-drilling": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-compressor-drilling.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell compressor drilling in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-compressor-drilling-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell compressor drilling in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-rain-harvesting": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-rain-harvesting.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Rainwater harvesting in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-rain-harvesting-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Rainwater harvesting in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-soil-test-and-pile-test": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-soil-test-and-pile-test.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Soil test and pile test in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-soil-test-and-pile-test-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Soil test and pile test in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-plumbing": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-plumbing.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell plumbing in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-plumbing-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell plumbing in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-water-yield": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-water-yield.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell water yield test in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-water-yield-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell water yield test in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-pebbles": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-pebbles.webp",
+    "w": 1400,
+    "h": 927,
+    "alt": "Gravel and pebble packing in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-pebbles-thumb.webp",
+    "w": 640,
+    "h": 423,
+    "alt": "Gravel and pebble packing in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-repair-and-maintenance": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-repair-and-maintenance.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell repair and maintenance in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-repair-and-maintenance-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell repair and maintenance in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-water-quality-and-quantity": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-water-quality-and-quantity.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Water quality and quantity testing in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-water-quality-and-quantity-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Water quality and quantity testing in Chennai by Aazham Borewells"
+   }
+  },
+  "domestic-borewell-point-survey": {
+   "lead": {
+    "src": "assets/img/photos/svc-domestic-borewell-point-survey.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell point survey in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-domestic-borewell-point-survey-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell point survey in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-installation-of-pumps": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-installation-of-pumps.webp",
+    "w": 1280,
+    "h": 850,
+    "alt": "Borewell pump installation in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-installation-of-pumps-thumb.webp",
+    "w": 640,
+    "h": 425,
+    "alt": "Borewell pump installation in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-groundwater-survey": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-groundwater-survey.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Groundwater survey in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-groundwater-survey-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Groundwater survey in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-cleaning": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-cleaning.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell cleaning in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-cleaning-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell cleaning in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-cleaning-methods": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-cleaning-methods.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell cleaning methods in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-cleaning-methods-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell cleaning methods in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-cleaning-process": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-cleaning-process.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell cleaning process in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-cleaning-process-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell cleaning process in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-pipe-line-cleaning": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-pipe-line-cleaning.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell pipe line cleaning in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-pipe-line-cleaning-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell pipe line cleaning in Chennai by Aazham Borewells"
+   }
+  },
+  "borewell-motor-line-cleaning": {
+   "lead": {
+    "src": "assets/img/photos/svc-borewell-motor-line-cleaning.webp",
+    "w": 1400,
+    "h": 933,
+    "alt": "Borewell motor line cleaning in Chennai by Aazham Borewells"
+   },
+   "thumb": {
+    "src": "assets/img/photos/svc-borewell-motor-line-cleaning-thumb.webp",
+    "w": 640,
+    "h": 426,
+    "alt": "Borewell motor line cleaning in Chennai by Aazham Borewells"
+   }
+  }
+ },
+ "home": {
+  "hero": {
+   "src": "assets/img/photos/home-hero.webp",
+   "w": 1536,
+   "h": 1024,
+   "alt": "Borewell drilling rig striking water at a Chennai site"
+  },
+  "about": {
+   "src": "assets/img/photos/home-about.webp",
+   "w": 478,
+   "h": 453,
+   "alt": "Aazham Borewells crew working on a borewell"
+  },
+  "why": {
+   "src": "assets/img/photos/home-why.webp",
+   "w": 1200,
+   "h": 800,
+   "alt": "Borewell drilling rig and crew on site in Chennai"
+  }
+ },
+ "hubs": {
+  "drilling": {
+   "src": "assets/img/photos/hub-drilling.webp",
+   "w": 1400,
+   "h": 933,
+   "alt": "Borewell drilling services in Chennai"
+  },
+  "cleaning": {
+   "src": "assets/img/photos/hub-cleaning.webp",
+   "w": 1400,
+   "h": 933,
+   "alt": "Borewell cleaning services in Chennai"
+  }
+ },
+ "gallery": [
+  {
+   "src": "assets/img/photos/gallery-01.webp",
+   "w": 728,
+   "h": 1600,
+   "alt": "Rig drilling a new borewell on a city plot \u2014 Aazham Borewells",
+   "cap": "Rig drilling a new borewell on a city plot"
+  },
+  {
+   "src": "assets/img/photos/gallery-02.webp",
+   "w": 720,
+   "h": 1600,
+   "alt": "Casing pipe set through the top strata \u2014 Aazham Borewells",
+   "cap": "Casing pipe set through the top strata"
+  },
+  {
+   "src": "assets/img/photos/gallery-03.webp",
+   "w": 720,
+   "h": 1600,
+   "alt": "Truck-mounted rig at a residential site \u2014 Aazham Borewells",
+   "cap": "Truck-mounted rig at a residential site"
+  },
+  {
+   "src": "assets/img/photos/gallery-04.webp",
+   "w": 720,
+   "h": 1600,
+   "alt": "Borewell crew at work in a Chennai street \u2014 Aazham Borewells",
+   "cap": "Borewell crew at work in a Chennai street"
+  },
+  {
+   "src": "assets/img/photos/gallery-05.webp",
+   "w": 716,
+   "h": 1600,
+   "alt": "Deep drilling in progress \u2014 Aazham Borewells",
+   "cap": "Deep drilling in progress"
+  },
+  {
+   "src": "assets/img/photos/gallery-06.webp",
+   "w": 716,
+   "h": 1600,
+   "alt": "Setting up the drilling mast \u2014 Aazham Borewells",
+   "cap": "Setting up the drilling mast"
+  },
+  {
+   "src": "assets/img/photos/gallery-07.webp",
+   "w": 716,
+   "h": 1600,
+   "alt": "Fresh borewell being developed \u2014 Aazham Borewells",
+   "cap": "Fresh borewell being developed"
+  },
+  {
+   "src": "assets/img/photos/gallery-08.webp",
+   "w": 720,
+   "h": 1600,
+   "alt": "Compressor drilling on a compact plot \u2014 Aazham Borewells",
+   "cap": "Compressor drilling on a compact plot"
+  },
+  {
+   "src": "assets/img/photos/gallery-09.webp",
+   "w": 716,
+   "h": 1600,
+   "alt": "New borewell point being drilled \u2014 Aazham Borewells",
+   "cap": "New borewell point being drilled"
+  },
+  {
+   "src": "assets/img/photos/gallery-10.webp",
+   "w": 716,
+   "h": 1600,
+   "alt": "Rig and support crew on site \u2014 Aazham Borewells",
+   "cap": "Rig and support crew on site"
+  },
+  {
+   "src": "assets/img/photos/gallery-11.webp",
+   "w": 716,
+   "h": 1600,
+   "alt": "Borewell casing and pit work \u2014 Aazham Borewells",
+   "cap": "Borewell casing and pit work"
+  },
+  {
+   "src": "assets/img/photos/gallery-12.webp",
+   "w": 716,
+   "h": 1600,
+   "alt": "Completed borewell handover \u2014 Aazham Borewells",
+   "cap": "Completed borewell handover"
+  }
+ ],
+ "core": {
+  "about-story": {
+   "src": "assets/img/photos/about-story.webp",
+   "w": 1200,
+   "h": 2133,
+   "alt": "Aazham Borewells drilling rig at work"
+  },
+  "about-banner": {
+   "src": "assets/img/photos/about-banner.webp",
+   "w": 1400,
+   "h": 547,
+   "alt": "Borewell drilling site managed by Aazham Borewells"
+  },
+  "contact": {
+   "src": "assets/img/photos/contact.webp",
+   "w": 1200,
+   "h": 469,
+   "alt": "Get in touch with Aazham Borewells, Chennai"
+  }
+ }
+}

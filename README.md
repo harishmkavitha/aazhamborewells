@@ -59,9 +59,10 @@ This is a demo. Swap these for the real business details, then rebuild:
    `https://example.com/your-form-endpoint`. Point it at a real form service
    (Formspree, Basin, etc.). Until then the form shows a friendly local
    acknowledgement and steers people to phone/WhatsApp.
-5. **Gallery images** — the gallery uses illustrated SVG placeholders in the
-   house style. Replace with real, compressed **WebP** photos of actual jobs
-   (longest edge ≤1600px), keeping the captions.
+5. **Gallery / photos** — the site now uses **real photos** from your image
+   pack, optimised into `assets/img/photos/`. To change any picture, edit the
+   selection in `tools/prepare_images.py`, re-run it, then re-run `build.py`.
+   The chosen files are recorded in `tools/image_manifest.json`.
 6. **OG share image** — `assets/img/og-default.jpg` is generated art; swap for a
    real photo-based share image if preferred (keep it 1200×630).
 7. **Legal pages** — `privacy.html` and `terms.html` are **starting drafts**.

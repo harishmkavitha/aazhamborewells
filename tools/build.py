@@ -99,6 +99,29 @@ def plate_water(ratio="plate"):
 
 PLATES = {"strata": plate_strata, "rig": plate_rig, "water": plate_water}
 
+# ---- real photos (from the client's image pack) ----------------------------
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "image_manifest.json")) as _f:
+    IMG = json.load(_f)
+
+def img(meta, cls="photo", eager=False):
+    load = 'loading="eager" fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
+    return (f'<img class="{cls}" src="{meta["src"]}" alt="{html.escape(meta["alt"])}" '
+            f'width="{meta["w"]}" height="{meta["h"]}" {load}>')
+
+def svc_card(slug, label, clean=False):
+    d = SERVICES[slug]
+    cls = "svc-card--clean" if clean else ""
+    thumb = IMG["services"][slug]["thumb"]
+    return f'''
+        <a class="svc-card svc-card--photo {cls}" href="{slug}.html">
+          <span class="svc-card__media">{img(thumb, "")}</span>
+          <span class="svc-card__body">
+            <h3 class="svc-card__title">{label}</h3>
+            <p>{d["tag"]}</p>
+            <span class="svc-card__more">Learn more \u2192</span>
+          </span>
+        </a>'''
+
 # ---- navigation data --------------------------------------------------------
 DRILLING = [
     ("borewell-drilling-services", "Borewell Drilling Services"),
@@ -544,18 +567,7 @@ def crumb(items):
 def related_grid(cat, exclude):
     src = DRILLING if cat == "drilling" else CLEANING
     picks = [(s, l) for s, l in src if s != exclude][:3]
-    cards = ""
-    for s, l in picks:
-        d = SERVICES[s]
-        cls = "svc-card--clean" if cat == "cleaning" else ""
-        cards += f'''
-        <a class="svc-card {cls}" href="{s}.html">
-          {icon(d["icon"])}
-          <h3 class="svc-card__title">{l}</h3>
-          <p>{d["tag"]}</p>
-          <span class="svc-card__more">Learn more \u2192</span>
-        </a>'''
-    return cards
+    return "".join(svc_card(s, l, clean=(cat == "cleaning")) for s, l in picks)
 
 def render_service(slug, label):
     d = SERVICES[slug]
@@ -570,7 +582,7 @@ def render_service(slug, label):
 
     intro = "".join(f"<p>{p}</p>" for p in d["intro"])
     includes = "".join(f"<li>{x}</li>" for x in d["includes"])
-    plate = PLATES[d["plate"]]("plate")
+    lead = IMG["services"][slug]["lead"]
 
     # steps or best-for block
     if d.get("steps"):
@@ -626,7 +638,7 @@ def render_service(slug, label):
             <h2>What we do</h2>
             {intro}
           </div>
-          <div class="split__media">{plate}</div>
+          <div class="split__media">{img(lead)}</div>
         </div>
       </div>
     </section>
@@ -672,17 +684,7 @@ def render_hub(cat):
     desc = (f"Complete borewell {name.lower()} in Chennai from {SITE['name']}: "
             + ", ".join(l for _, l in src[:4]).lower() + " and more.")
     desc = desc[:154]
-    cards = ""
-    for s, l in src:
-        d = SERVICES[s]
-        cls = "svc-card--clean" if clean else ""
-        cards += f'''
-        <a class="svc-card {cls}" href="{s}.html">
-          {icon(d["icon"])}
-          <h3 class="svc-card__title">{l}</h3>
-          <p>{d["tag"]}</p>
-          <span class="svc-card__more">Learn more \u2192</span>
-        </a>'''
+    cards = "".join(svc_card(s, l, clean=clean) for s, l in src)
     intro = ("A blocked or slow borewell is rarely a dead borewell. Our cleaning side clears the silt, sand, scale and blockages that throttle flow — and proves the result with a yield check."
              if clean else
              "From the first survey to the final pump connection, our drilling side handles the whole life of a borewell. Every job is done by our own crews and machines, quoted in writing, and built to last.")
@@ -697,12 +699,20 @@ def render_hub(cat):
     </section>
     {strata_rule()}
     <section>
-      <div class="container stack-lg">
-        <div class="stack" style="max-width:60ch">
-          <p class="{tickcls}">Overview</p>
-          <h2>{'Bring your borewell back to life' if clean else 'Everything a borewell needs'}</h2>
-          <p class="lede">{intro}</p>
+      <div class="container">
+        <div class="split{' split--reverse' if clean else ''}">
+          <div class="stack">
+            <p class="{tickcls}">Overview</p>
+            <h2>{'Bring your borewell back to life' if clean else 'Everything a borewell needs'}</h2>
+            <p class="lede">{intro}</p>
+            <p><a class="btn" href="contact.html">Get a free site visit</a></p>
+          </div>
+          <div class="split__media">{img(IMG["hubs"][cat])}</div>
         </div>
+      </div>
+    </section>
+    <section class="is-flush" style="padding-bottom:var(--space-section)">
+      <div class="container">
         <div class="grid grid--3">{cards}</div>
       </div>
     </section>
@@ -727,18 +737,7 @@ def local_business_ld():
             "areaServed": "Chennai, Tamil Nadu"}
 
 def home_service_cards(src, clean=False):
-    cards = ""
-    for s, l in src:
-        d = SERVICES[s]
-        cls = "svc-card--clean" if clean else ""
-        cards += f'''
-        <a class="svc-card {cls}" href="{s}.html">
-          {icon(d["icon"])}
-          <h3 class="svc-card__title">{l}</h3>
-          <p>{d["tag"]}</p>
-          <span class="svc-card__more">Learn more \u2192</span>
-        </a>'''
-    return cards
+    return "".join(svc_card(s, l, clean=clean) for s, l in src)
 
 def render_home():
     title = f"{SITE['name']} | Borewell Drilling & Cleaning in Chennai"
@@ -774,9 +773,12 @@ def render_home():
               <a class="btn btn--ghost-dark" href="drilling-services.html">Explore services</a>
             </div>
           </div>
-          <div class="ruler" aria-hidden="true">
-            <div class="ruler__fill"></div>
-            {marks}
+          <div class="hero__media">
+            {img(IMG["home"]["hero"], "", eager=True)}
+            <div class="ruler ruler--overlay" aria-hidden="true">
+              <div class="ruler__fill"></div>
+              {marks}
+            </div>
           </div>
         </div>
       </div>
@@ -797,7 +799,7 @@ def render_home():
       <div class="container">
         <div class="split">
           <div class="split__media about-figure">
-            {PLATES['strata']('plate--tall')}
+            {img(IMG["home"]["about"])}
             <div class="about-figure__badge"><b>{SITE['since']}</b><span>drilling since</span></div>
           </div>
           <div class="stack">
@@ -862,7 +864,7 @@ def render_home():
               <li>Fast response across Chennai, six days a week</li>
             </ul>
           </div>
-          <div class="split__media">{PLATES['rig']('plate')}</div>
+          <div class="split__media">{img(IMG["home"]["why"])}</div>
         </div>
       </div>
     </section>
@@ -904,7 +906,7 @@ def render_about():
             <p>Over {SITE['years']} years we've drilled through every kind of strata Chennai can throw at a bit \u2014 soft coastal sand, stubborn granite, mixed rock \u2014 and added the machines and methods to match: lorry rigs, DTH hammers, compressors and compact Galaxy units for tight city plots.</p>
             <p>Today we handle the whole life of a borewell, from the first survey to cleaning one that's decades old. Every job is done by our own people, because that's the only way to stand behind it.</p>
           </div>
-          <div class="split__media">{PLATES['strata']('plate')}</div>
+          <div class="split__media">{img(IMG["core"]["about-story"])}</div>
         </div>
       </div>
     </section>
@@ -966,6 +968,7 @@ def render_contact():
               <div><b>Email</b><a href="mailto:{SITE['email']}">{SITE['email']}</a><br><a href="mailto:{SITE['email2']}">{SITE['email2']}</a></div></div>
             <div class="info-row"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">{IC['pin']}</svg>
               <div><b>Visit</b>{SITE['addr_line']},<br>{SITE['addr_city']}, Tamil Nadu {SITE['addr_pin']}</div></div>
+            <div class="split__media" style="margin-top:.5rem">{img(IMG["core"]["contact"])}</div>
             <div class="map-embed" style="margin-top:1.5rem">
               <iframe title="Map to Aazham Borewells, Vadapalani" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 src="https://maps.google.com/maps?q={maps_q}&t=&z=14&ie=UTF8&iwloc=&output=embed"></iframe>
@@ -997,20 +1000,9 @@ def render_gallery():
     title = f"Gallery | {SITE['name']} Borewell Work in Chennai"
     desc = ("See Aazham Borewells at work across Chennai \u2014 rig and DTH drilling, borewell cleaning, "
             "pump installation, recharge structures and more.")
-    items = [
-        ("rig", "Truck-mounted rig drilling a new borewell, Porur"),
-        ("strata", "Reading the strata log during a point survey"),
-        ("water", "Borewell flushed clean \u2014 clear water restored"),
-        ("rig", "DTH hammer drilling through granite, Tambaram"),
-        ("strata", "Casing pipe set through the loose top strata"),
-        ("water", "Recharge pit feeding a home borewell, Adyar"),
-        ("rig", "Submersible pump lowered and commissioned"),
-        ("water", "Pipeline descaled and back to full flow"),
-        ("strata", "Gravel packing graded and ready to place"),
-    ]
     figs = ""
-    for plate, cap in items:
-        figs += f'<figure class="gallery-item">{PLATES[plate]("plate--wide")}<figcaption>{cap}</figcaption></figure>'
+    for g in IMG["gallery"]:
+        figs += f'<figure class="gallery-item">{img(g)}<figcaption>{g["cap"]}</figcaption></figure>'
     body = f'''
     <section class="page-hero">
       <div class="container stack">
@@ -1024,8 +1016,6 @@ def render_gallery():
     <section>
       <div class="container stack-lg">
         <div class="gallery-grid">{figs}</div>
-        <p style="font-size:var(--t-sm);color:var(--c-ink-soft);border-left:3px solid var(--c-ochre);padding-left:1rem">
-          Note for launch: these are illustrated placeholders in the site's house style. Swap them for real, compressed WebP photos of your own jobs \u2014 same captions, real sites.</p>
       </div>
     </section>
     {cta_band()}'''
