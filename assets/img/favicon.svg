@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="Aazham Borewells mark">
+  <defs><clipPath id="r"><rect x="4" y="4" width="40" height="40" rx="9"/></clipPath></defs>
+  <g clip-path="url(#r)">
+    <rect x="4" y="4" width="40" height="40" fill="#221e18"/>
+    <rect x="4" y="4" width="40" height="12" fill="#bd5327"/>
+    <rect x="4" y="16" width="40" height="8" fill="#c9992f"/>
+    <rect x="4" y="24" width="40" height="12" fill="#1a6560"/>
+    <!-- borehole -->
+    <rect x="22.4" y="4" width="3.2" height="30" fill="#f4f2ee"/>
+    <!-- water drop at depth -->
+    <path d="M24 40c-2.6 0-4.6-2-4.6-4.6 0-2.4 3-5.7 4.6-7.4 1.6 1.7 4.6 5 4.6 7.4C28.6 38 26.6 40 24 40Z" fill="#f4f2ee"/>
+  </g>
+  <rect x="4" y="4" width="40" height="40" rx="9" fill="none" stroke="#000" stroke-opacity=".12"/>
+</svg>
